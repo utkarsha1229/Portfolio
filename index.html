@@ -1,0 +1,1742 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Utkarsha Budhvant | AI/ML & Software Engineer</title>
+
+    <meta name="description"
+          content="Portfolio of Utkarsha Budhvant - Information Technology student, AI/ML enthusiast and software developer.">
+
+    <style>
+
+        /* =========================
+           GLOBAL
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --bg: #070b14;
+            --bg2: #0c1220;
+            --card: rgba(255,255,255,0.045);
+            --border: rgba(255,255,255,0.10);
+            --text: #f5f7fb;
+            --muted: #9aa5b5;
+            --primary: #7c5cff;
+            --secondary: #00d4ff;
+            --green: #32d583;
+        }
+
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            background:
+                radial-gradient(circle at 15% 20%, rgba(124,92,255,.16), transparent 28%),
+                radial-gradient(circle at 85% 10%, rgba(0,212,255,.12), transparent 25%),
+                var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            width: min(1150px, 90%);
+            margin: auto;
+        }
+
+        section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 55px;
+        }
+
+        .section-title span {
+            color: var(--secondary);
+            font-size: 14px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .section-title h2 {
+            font-size: 38px;
+            margin-top: 8px;
+        }
+
+        .section-title p {
+            color: var(--muted);
+            max-width: 600px;
+            margin: 12px auto;
+        }
+
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(7,11,20,.75);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .nav-container {
+            height: 72px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+
+        .logo span {
+            color: var(--secondary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #c9d0dc;
+            font-size: 14px;
+            transition: .3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary);
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 100px;
+            position: relative;
+        }
+
+        .hero-grid {
+            position: absolute;
+            inset: 0;
+            opacity: .14;
+            background-image:
+                linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px);
+            background-size: 60px 60px;
+            mask-image: linear-gradient(to bottom, black, transparent);
+        }
+
+        .hero-content {
+            position: relative;
+            max-width: 850px;
+        }
+
+        .availability {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            padding: 8px 14px;
+            border: 1px solid rgba(50,213,131,.25);
+            background: rgba(50,213,131,.07);
+            border-radius: 30px;
+            color: #9ef0c3;
+            font-size: 13px;
+            margin-bottom: 25px;
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--green);
+            box-shadow: 0 0 12px var(--green);
+        }
+
+        .hero h1 {
+            font-size: clamp(48px, 8vw, 88px);
+            line-height: 1;
+            letter-spacing: -4px;
+            margin-bottom: 22px;
+        }
+
+        .gradient-text {
+            background: linear-gradient(
+                90deg,
+                var(--secondary),
+                var(--primary)
+            );
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .hero h2 {
+            font-size: 25px;
+            color: #c5ccd8;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            color: var(--muted);
+            font-size: 17px;
+            max-width: 700px;
+            margin-bottom: 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 13px 22px;
+            border-radius: 9px;
+            font-weight: 600;
+            font-size: 14px;
+            transition: .3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(
+                135deg,
+                var(--primary),
+                #5d7cff
+            );
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(124,92,255,.25);
+        }
+
+        .btn-outline {
+            border: 1px solid var(--border);
+            background: rgba(255,255,255,.03);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--secondary);
+            color: var(--secondary);
+        }
+
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .profile-card {
+            border: 1px solid var(--border);
+            background: var(--card);
+            border-radius: 20px;
+            padding: 35px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+
+        .profile-circle {
+            width: 170px;
+            height: 170px;
+            margin: auto auto 25px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 55px;
+            font-weight: 800;
+            background:
+                linear-gradient(135deg,
+                rgba(124,92,255,.25),
+                rgba(0,212,255,.15));
+            border: 1px solid rgba(255,255,255,.15);
+        }
+
+        .profile-card h3 {
+            font-size: 23px;
+        }
+
+        .profile-card p {
+            color: var(--muted);
+            margin-top: 5px;
+        }
+
+        .about-text h3 {
+            font-size: 30px;
+            margin-bottom: 18px;
+        }
+
+        .about-text p {
+            color: var(--muted);
+            margin-bottom: 18px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .info-box {
+            padding: 15px;
+            background: rgba(255,255,255,.035);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+        }
+
+        .info-box span {
+            color: var(--muted);
+            font-size: 12px;
+        }
+
+        .info-box strong {
+            display: block;
+            margin-top: 3px;
+        }
+
+
+        /* =========================
+           EDUCATION
+        ========================= */
+
+        .timeline {
+            position: relative;
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .timeline::before {
+            content: "";
+            position: absolute;
+            left: 15px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(
+                var(--primary),
+                var(--secondary)
+            );
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 55px;
+            margin-bottom: 35px;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 7px;
+            top: 6px;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: var(--secondary);
+            box-shadow: 0 0 15px rgba(0,212,255,.6);
+        }
+
+        .timeline-card {
+            padding: 25px;
+            border: 1px solid var(--border);
+            background: var(--card);
+            border-radius: 14px;
+        }
+
+        .timeline-card h3 {
+            font-size: 20px;
+        }
+
+        .timeline-card h4 {
+            color: var(--secondary);
+            font-size: 14px;
+            margin: 5px 0;
+        }
+
+        .timeline-card p {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           EXPERIENCE
+        ========================= */
+
+        .experience-card {
+            max-width: 900px;
+            margin: auto;
+            padding: 35px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 18px;
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .experience-header h3 {
+            font-size: 23px;
+        }
+
+        .experience-header p {
+            color: var(--secondary);
+        }
+
+        .date {
+            color: var(--muted);
+            font-size: 14px;
+            white-space: nowrap;
+        }
+
+        .experience-card ul {
+            padding-left: 20px;
+            color: var(--muted);
+        }
+
+        .experience-card li {
+            margin-bottom: 12px;
+        }
+
+
+        /* =========================
+           PROJECTS
+        ========================= */
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 25px;
+        }
+
+        .project-card {
+            position: relative;
+            padding: 30px;
+            border: 1px solid var(--border);
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(255,255,255,.06),
+                    rgba(255,255,255,.015)
+                );
+            border-radius: 18px;
+            transition: .35s;
+            overflow: hidden;
+        }
+
+        .project-card::before {
+            content: "";
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background: var(--primary);
+            filter: blur(90px);
+            opacity: .12;
+            right: -50px;
+            top: -50px;
+        }
+
+        .project-card:hover {
+            transform: translateY(-7px);
+            border-color: rgba(124,92,255,.5);
+        }
+
+        .project-number {
+            font-size: 13px;
+            color: var(--secondary);
+            margin-bottom: 20px;
+        }
+
+        .project-card h3 {
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+
+        .project-card > p {
+            color: var(--muted);
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        .project-card ul {
+            color: #aeb8c7;
+            padding-left: 18px;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        .project-card li {
+            margin-bottom: 8px;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+        }
+
+        .tag {
+            padding: 5px 10px;
+            border-radius: 20px;
+            background: rgba(0,212,255,.07);
+            border: 1px solid rgba(0,212,255,.15);
+            color: #9eeeff;
+            font-size: 11px;
+        }
+
+
+        /* =========================
+           SKILLS
+        ========================= */
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 20px;
+        }
+
+        .skill-card {
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px solid var(--border);
+            background: var(--card);
+        }
+
+        .skill-card h3 {
+            margin-bottom: 15px;
+            font-size: 17px;
+        }
+
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 9px;
+        }
+
+        .skill {
+            padding: 7px 12px;
+            border-radius: 7px;
+            background: rgba(255,255,255,.055);
+            color: #cbd3df;
+            font-size: 13px;
+        }
+
+
+        /* =========================
+           ACHIEVEMENTS
+        ========================= */
+
+        .achievement-grid {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 20px;
+        }
+
+        .achievement {
+            padding: 25px;
+            border: 1px solid var(--border);
+            border-radius: 15px;
+            background: var(--card);
+            display: flex;
+            gap: 18px;
+        }
+
+        .achievement-icon {
+            min-width: 45px;
+            height: 45px;
+            border-radius: 10px;
+            background: rgba(124,92,255,.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+
+        .achievement h3 {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .achievement p {
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+
+        /* =========================
+           CODING
+        ========================= */
+
+        .coding-grid {
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 18px;
+        }
+
+        .coding-card {
+            text-align: center;
+            padding: 25px 15px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+        }
+
+        .coding-card strong {
+            display: block;
+            font-size: 28px;
+            color: var(--secondary);
+        }
+
+        .coding-card span {
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact-box {
+            text-align: center;
+            padding: 60px 30px;
+            border-radius: 20px;
+            border: 1px solid var(--border);
+            background:
+                radial-gradient(
+                    circle at center,
+                    rgba(124,92,255,.12),
+                    transparent 55%
+                ),
+                var(--card);
+        }
+
+        .contact-box h2 {
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .contact-box p {
+            color: var(--muted);
+            max-width: 600px;
+            margin: auto auto 25px;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 25px 0;
+            text-align: center;
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+
+        /* =========================
+           ANIMATION
+        ========================= */
+
+        .fade-up {
+            animation: fadeUp 1s ease forwards;
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media(max-width: 800px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            section {
+                padding: 75px 0;
+            }
+
+            .about-grid,
+            .projects-grid,
+            .skills-grid,
+            .achievement-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .coding-grid {
+                grid-template-columns: repeat(2,1fr);
+            }
+
+            .hero h1 {
+                font-size: 55px;
+                letter-spacing: -2px;
+            }
+
+            .hero h2 {
+                font-size: 20px;
+            }
+
+            .experience-header {
+                flex-direction: column;
+            }
+        }
+
+        @media(max-width: 500px) {
+
+            .coding-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 44px;
+            }
+
+            .section-title h2 {
+                font-size: 30px;
+            }
+
+            .contact-box h2 {
+                font-size: 30px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<nav>
+
+    <div class="container nav-container">
+
+        <a href="#home" class="logo">
+            UB<span>.</span>
+        </a>
+
+        <ul class="nav-links">
+
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#achievements">Achievements</a></li>
+            <li><a href="#contact">Contact</a></li>
+
+        </ul>
+
+    </div>
+
+</nav>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero" id="home">
+
+    <div class="hero-grid"></div>
+
+    <div class="container">
+
+        <div class="hero-content fade-up">
+
+            <div class="availability">
+
+                <span class="dot"></span>
+
+                Open to opportunities
+
+            </div>
+
+            <h1>
+
+                Hi, I'm
+                <span class="gradient-text">
+                    Utkarsha.
+                </span>
+
+            </h1>
+
+            <h2>
+                Information Technology Student · AI/ML · Software Development
+            </h2>
+
+            <p>
+
+                I'm a B.E. Information Technology student at Pune Institute
+                of Computer Technology with a strong interest in
+                Artificial Intelligence, Machine Learning, Data Analytics,
+                backend systems and software engineering.
+
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#projects" class="btn btn-primary">
+                    Explore My Work →
+                </a>
+
+                <a href="#contact" class="btn btn-outline">
+                    Contact Me
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section id="about">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>01 — About Me</span>
+
+            <h2>Building with curiosity.</h2>
+
+            <p>
+                A quick introduction to who I am and what I work with.
+            </p>
+
+        </div>
+
+
+        <div class="about-grid">
+
+
+            <div class="profile-card">
+
+                <div class="profile-circle">
+                    UB
+                </div>
+
+                <h3>Utkarsha Budhvant</h3>
+
+                <p>
+                    B.E. Information Technology
+                </p>
+
+                <p>
+                    Pune, India
+                </p>
+
+            </div>
+
+
+            <div class="about-text">
+
+                <h3>
+                    Turning data & ideas into practical systems.
+                </h3>
+
+                <p>
+
+                    I am an Information Technology engineering student
+                    passionate about solving real-world problems through
+                    software, data and artificial intelligence.
+
+                </p>
+
+                <p>
+
+                    My experience includes machine learning model
+                    development, data preprocessing, analytics,
+                    backend APIs, log analysis, anomaly detection and
+                    AI-powered diagnostic systems.
+
+                </p>
+
+                <div class="info-grid">
+
+                    <div class="info-box">
+                        <span>Education</span>
+                        <strong>B.E. Information Technology</strong>
+                    </div>
+
+                    <div class="info-box">
+                        <span>Institute</span>
+                        <strong>PICT, Pune</strong>
+                    </div>
+
+                    <div class="info-box">
+                        <span>CGPA</span>
+                        <strong>9.88 / 10</strong>
+                    </div>
+
+                    <div class="info-box">
+                        <span>Focus</span>
+                        <strong>AI/ML & Software</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     EDUCATION
+========================= -->
+
+<section id="education">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>02 — Education</span>
+
+            <h2>Academic Journey</h2>
+
+        </div>
+
+
+        <div class="timeline">
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                    <h3>
+                        Bachelor of Engineering — Information Technology
+                    </h3>
+
+                    <h4>
+                        Pune Institute of Computer Technology, Pune
+                    </h4>
+
+                    <p>
+                        2023 – Present · CGPA: 9.88 / 10
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                    <h3>
+                        HSC — PCMB
+                    </h3>
+
+                    <h4>
+                        Residential Junior College, Ahilyanagar
+                    </h4>
+
+                    <p>
+                        June 2021 – March 2023 · 86.67%
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                    <h3>
+                        SSC
+                    </h3>
+
+                    <h4>
+                        Dr. N. J. Paulbudhe High School, Ahilyanagar
+                    </h4>
+
+                    <p>
+                        June 2011 – March 2021 · 95.00%
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     EXPERIENCE
+========================= -->
+
+<section id="experience">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>03 — Experience</span>
+
+            <h2>Internship Experience</h2>
+
+        </div>
+
+
+        <div class="experience-card">
+
+            <div class="experience-header">
+
+                <div>
+
+                    <h3>
+                        AI/ML Virtual Intern
+                    </h3>
+
+                    <p>
+                        AICTE – EduSkills · Google for Developers
+                    </p>
+
+                </div>
+
+                <span class="date">
+                    Jan 2026 – Mar 2026
+                </span>
+
+            </div>
+
+
+            <ul>
+
+                <li>
+                    Applied hands-on machine learning techniques using
+                    TensorFlow, Keras and Scikit-learn to build and
+                    evaluate predictive models.
+                </li>
+
+                <li>
+                    Performed data preprocessing, cleaning, feature
+                    scaling and dataset splitting using Pandas and NumPy.
+                </li>
+
+                <li>
+                    Trained Linear Regression, Logistic Regression,
+                    Decision Trees and Neural Networks for classification
+                    and regression tasks.
+                </li>
+
+                <li>
+                    Evaluated models using metrics including Accuracy,
+                    RMSE and F1-Score and analyzed prediction outputs.
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     PROJECTS
+========================= -->
+
+<section id="projects">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>04 — Projects</span>
+
+            <h2>Featured Projects</h2>
+
+            <p>
+                A selection of systems and AI-powered applications
+                I've worked on.
+            </p>
+
+        </div>
+
+
+        <div class="projects-grid">
+
+
+            <!-- PROJECT 1 -->
+
+            <div class="project-card">
+
+                <div class="project-number">
+                    PROJECT 01
+                </div>
+
+                <h3>
+                    Live LOG Analysis & AI Diagnostics Platform
+                </h3>
+
+                <p>
+
+                    An automated telemetry and diagnostic platform
+                    designed for real-time distributed log monitoring
+                    and AI-powered troubleshooting.
+
+                </p>
+
+                <ul>
+
+                    <li>
+                        Built log ingestion and health monitoring using
+                        Python, FastAPI and Streamlit.
+                    </li>
+
+                    <li>
+                        Implemented semantic log search using Qdrant
+                        vector database and Gemini embeddings.
+                    </li>
+
+                    <li>
+                        Integrated RAG with Gemini Pro for anomaly
+                        detection and diagnostic analysis.
+                    </li>
+
+                    <li>
+                        Containerized services using Docker and
+                        Docker Compose.
+                    </li>
+
+                </ul>
+
+                <div class="tags">
+
+                    <span class="tag">Python</span>
+                    <span class="tag">FastAPI</span>
+                    <span class="tag">Qdrant</span>
+                    <span class="tag">RAG</span>
+                    <span class="tag">Gemini</span>
+                    <span class="tag">Streamlit</span>
+                    <span class="tag">Docker</span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PROJECT 2 -->
+
+            <div class="project-card">
+
+                <div class="project-number">
+                    PROJECT 02
+                </div>
+
+                <h3>
+                    SpendGenie
+                </h3>
+
+                <p>
+
+                    An automated analytics and anomaly detection engine
+                    for processing transactional and system log data.
+
+                </p>
+
+                <ul>
+
+                    <li>
+                        Built an analytics engine using Python, Flask
+                        and Pandas.
+                    </li>
+
+                    <li>
+                        Implemented rule-based anomaly detection and
+                        statistical thresholding.
+                    </li>
+
+                    <li>
+                        Integrated LLaMA 3 through Groq for automated
+                        diagnostic summaries.
+                    </li>
+
+                    <li>
+                        Designed dashboards for system health metrics,
+                        categories and alert trends.
+                    </li>
+
+                </ul>
+
+                <div class="tags">
+
+                    <span class="tag">Python</span>
+                    <span class="tag">Flask</span>
+                    <span class="tag">Pandas</span>
+                    <span class="tag">REST API</span>
+                    <span class="tag">LLaMA 3</span>
+                    <span class="tag">Groq</span>
+                    <span class="tag">Analytics</span>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     SKILLS
+========================= -->
+
+<section id="skills">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>05 — Skills</span>
+
+            <h2>Technical Toolkit</h2>
+
+        </div>
+
+
+        <div class="skills-grid">
+
+
+            <div class="skill-card">
+
+                <h3>Programming Languages</h3>
+
+                <div class="skill-list">
+
+                    <span class="skill">Python</span>
+                    <span class="skill">C++</span>
+                    <span class="skill">Java</span>
+                    <span class="skill">SQL</span>
+
+                </div>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <h3>AI / Data</h3>
+
+                <div class="skill-list">
+
+                    <span class="skill">TensorFlow</span>
+                    <span class="skill">Keras</span>
+                    <span class="skill">Scikit-learn</span>
+                    <span class="skill">Pandas</span>
+                    <span class="skill">NumPy</span>
+                    <span class="skill">Machine Learning</span>
+
+                </div>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <h3>Backend & APIs</h3>
+
+                <div class="skill-list">
+
+                    <span class="skill">FastAPI</span>
+                    <span class="skill">Flask</span>
+                    <span class="skill">REST API</span>
+                    <span class="skill">Streamlit</span>
+
+                </div>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <h3>Systems & Networking</h3>
+
+                <div class="skill-list">
+
+                    <span class="skill">Operating Systems</span>
+                    <span class="skill">Multithreading</span>
+                    <span class="skill">Processes</span>
+                    <span class="skill">Memory Management</span>
+                    <span class="skill">TCP/IP</span>
+                    <span class="skill">HTTP/REST</span>
+                    <span class="skill">DNS</span>
+
+                </div>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <h3>Databases</h3>
+
+                <div class="skill-list">
+
+                    <span class="skill">MySQL</span>
+                    <span class="skill">PostgreSQL</span>
+                    <span class="skill">MongoDB</span>
+                    <span class="skill">Qdrant</span>
+                    <span class="skill">Snowflake</span>
+
+                </div>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <h3>Developer Tools</h3>
+
+                <div class="skill-list">
+
+                    <span class="skill">Git</span>
+                    <span class="skill">GitHub</span>
+                    <span class="skill">Docker</span>
+                    <span class="skill">Docker Compose</span>
+                    <span class="skill">JIRA</span>
+                    <span class="skill">VS Code</span>
+                    <span class="skill">Regex</span>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     ACHIEVEMENTS
+========================= -->
+
+<section id="achievements">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>06 — Achievements</span>
+
+            <h2>Beyond the Classroom</h2>
+
+        </div>
+
+
+        <div class="achievement-grid">
+
+
+            <div class="achievement">
+
+                <div class="achievement-icon">
+                    ⚡
+                </div>
+
+                <div>
+
+                    <h3>
+                        400+ DSA Problems
+                    </h3>
+
+                    <p>
+                        Solved across LeetCode and HackerRank.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="achievement">
+
+                <div class="achievement-icon">
+                    ★
+                </div>
+
+                <div>
+
+                    <h3>
+                        HackerRank
+                    </h3>
+
+                    <p>
+                        5-Star in C++ and 4-Star in Java.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="achievement">
+
+                <div class="achievement-icon">
+                    ☁
+                </div>
+
+                <div>
+
+                    <h3>
+                        Google Cloud Training
+                    </h3>
+
+                    <p>
+                        Completed Google Cloud Certified Associate
+                        Cloud Engineer training.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="achievement">
+
+                <div class="achievement-icon">
+                    ◈
+                </div>
+
+                <div>
+
+                    <h3>
+                        IBM SQL Certification
+                    </h3>
+
+                    <p>
+                        Completed IBM SQL & Relational Databases
+                        Certification.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="achievement">
+
+                <div class="achievement-icon">
+                    🚀
+                </div>
+
+                <div>
+
+                    <h3>
+                        HCL TechBee
+                    </h3>
+
+                    <p>
+                        Selected for the competitive HCL TechBee
+                        Programme.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="achievement">
+
+                <div class="achievement-icon">
+                    🏆
+                </div>
+
+                <div>
+
+                    <h3>
+                        Mastercard Hackathon
+                    </h3>
+
+                    <p>
+                        Participated in Mastercard Hackathon for
+                        software solutions.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     CODING PROFILES
+========================= -->
+
+<section>
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>07 — Problem Solving</span>
+
+            <h2>My Coding Journey</h2>
+
+        </div>
+
+
+        <div class="coding-grid">
+
+            <div class="coding-card">
+
+                <strong>400+</strong>
+
+                <span>
+                    DSA Problems
+                </span>
+
+            </div>
+
+
+            <div class="coding-card">
+
+                <strong>5★</strong>
+
+                <span>
+                    HackerRank C++
+                </span>
+
+            </div>
+
+
+            <div class="coding-card">
+
+                <strong>4★</strong>
+
+                <span>
+                    HackerRank Java
+                </span>
+
+            </div>
+
+
+            <div class="coding-card">
+
+                <strong>9.88</strong>
+
+                <span>
+                    CGPA / 10
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section id="contact">
+
+    <div class="container">
+
+        <div class="contact-box">
+
+            <h2>
+                Let's build something useful.
+            </h2>
+
+            <p>
+
+                I'm interested in opportunities involving software
+                engineering, AI/ML, data analytics and backend systems.
+
+                Feel free to connect with me.
+
+            </p>
+
+
+            <div class="contact-links">
+
+                <a
+                    href="mailto:utkarshabudhawant@gmail.com"
+                    class="btn btn-primary">
+
+                    ✉ Email Me
+
+                </a>
+
+
+                <a
+                    href="https://www.linkedin.com/in/utkarsha-budhvant-a0289a2b4/"
+                    target="_blank"
+                    class="btn btn-outline">
+
+                    LinkedIn ↗
+
+                </a>
+
+
+                <a
+                    href="https://github.com/utkarsha1229/"
+                    target="_blank"
+                    class="btn btn-outline">
+
+                    GitHub ↗
+
+                </a>
+
+
+                <a
+                    href="https://leetcode.com/u/Utkarsha_1229/"
+                    target="_blank"
+                    class="btn btn-outline">
+
+                    LeetCode ↗
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="container">
+
+        © 2026 Utkarsha Budhvant · Built with HTML & CSS
+
+    </div>
+
+</footer>
+
+
+</body>
+</html>
